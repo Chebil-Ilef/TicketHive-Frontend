@@ -50,8 +50,10 @@ body {
 }
 
 /*LEFT*/
-.content .logo {
+.content a {
   font-size: 30px;
+  color: #e4e4e4;
+  text-decoration: none;
 }
 
 .text-sci h2 {
