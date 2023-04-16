@@ -345,9 +345,13 @@ h4 {
 /* OPERATIONS */
 .operations {
   max-width: 100rem;
-  margin: 12rem auto 0 auto;
+  /* margin: 12rem auto 0 auto; */
   border-radius: 10px;
-  background-color: #fff;
+  background-color: transparent;
+  position: relative;
+  /* max-width: 48rem; */
+  margin: 0 auto 0 auto;
+  /* border: 1px solid var(--color-primary); */
 }
 
 .operations__tab-container {
@@ -388,65 +392,81 @@ h4 {
   transform: translateY(-66%);
 }
 
-.operations__content {
-  display: none;
-  font-size: 1.7rem;
-  padding: 2.5rem 7rem 6.5rem 7rem;
+
+
+/* .slider-wrapper{
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+} */
+.slider{
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.72rem;
+  border-radius: 10px;
 }
 
-.operations__content--active {
-  display: grid;
-  grid-template-columns: 7rem 1fr;
-  column-gap: 3rem;
-  row-gap: 0.5rem;
+.slider::-webkit-scrollbar{
+  width: 0;
+  background-color: transparent;
 }
 
-.operations__header {
-  font-size: 2.25rem;
-  font-weight: 500;
-  align-self: center;
+.slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
 }
 
-.operations__icon {
+
+.slider-nav{
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.text{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 7rem;
-  width: 7rem;
-  border-radius: 50%;
+  bottom: 5rem;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
 }
 
-.operations__icon svg {
-  height: 2.75rem;
-  width: 2.75rem;
+.text p{
+  color: white;
+  font-size: 30px;
 }
 
+.text p span{
+  font-size: 20px;
+  
+}
 
-
-.operations__icon--1 {
-  background-color: var(--color-secondary-opacity);
-}
-.operations__icon--2 {
-  background-color: var(--color-primary-opacity);
-}
-.operations__icon--3 {
-  background-color: var(--color-tertiary-opacity);
-}
-.operations__icon--1 svg {
-  fill: var(--color-secondary-darker);
-}
-.operations__icon--2 svg {
-  fill: var(--color-primary);
-}
-.operations__icon--3 svg {
-  fill: var(--color-tertiary);
+.slider:hover .text{
+  opacity: 1;
 }
 
 
-.container{
-  margin-top: 20%;
-  margin-left: -10%;
-}
   
   
   
