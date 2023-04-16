@@ -186,9 +186,9 @@ img {
   align-items: center;
 }
 
-.header__title,.CatlogueTitle {
+.header__title {
   flex: 1;
-  color: #ffff;
+
   max-width: 115rem;
   display: grid;
   grid-template-columns: 3fr;
@@ -426,10 +426,6 @@ h5 {
   /* background-color: #888; */
   opacity: 1;
 }
-
-
-
-
 
 /* TESTIMONIALS */
 .testimonial {
@@ -817,227 +813,227 @@ h5 {
 }
 
 
-
 /*******CATALOGUE GRID*******/
 #section2{
-    font-family: "Inter", sans-serif;
-    padding: 10rem 5rem 10rem 5rem;
-    margin-bottom: 15rem;
-    border-top: 1px solid #ddd;
-    transition: transform 1s, opacity 1s;
-    color: #ffffff;
-    text-align: center;
-    background: #231955;
+  font-family: "Inter", sans-serif;
+  padding: 10rem 5rem 10rem 5rem;
+  margin-bottom: 15rem;
+  border-top: 1px solid #ddd;
+  transition: transform 1s, opacity 1s;
+  color: #ffffff;
+  text-align: center;
+  background: #231955;
 
 }
 
 .CatlogueTitle {
-  font-weight: 900;
-  font-size: 2.7rem;
-  max-width: 20ch;
+font-weight: 900;
+font-size: 2.7rem;
+max-width: 20ch;
 }
 
 
 .cardGrid a {
-  color: currentcolor;
+color: currentcolor;
 }
 
 /* Utilities */
 .auto-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* show three cards per row */
-  grid-gap: var(--auto-grid-gap, 0);
-  padding: 0;
-  justify-items: center; /* center the cards horizontally */
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* show three cards per row */
+grid-gap: var(--auto-grid-gap, 0);
+padding: 0;
+justify-items: center; /* center the cards horizontally */
 }
 
 .flow > * + * {
-  margin-top: var(--flow-space, 1em);
+margin-top: var(--flow-space, 1em);
 }
 
 /* Composition */
 .team {
-  --flow-space: 2em;
-  display: flex;
-  flex-wrap: wrap; /* allow the cards to wrap to a new line */
-  justify-content: center; /* center the cards vertically */
+--flow-space: 2em;
+display: flex;
+flex-wrap: wrap; /* allow the cards to wrap to a new line */
+justify-content: center; /* center the cards vertically */
 }
 
 /* Blocks */
 /* Blocks */
 .cardGrid {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  aspect-ratio: 1/1;
-  position: relative;
-  padding: 2rem;
-  color: #ffffff;
-  text-decoration: none;
-  overflow: hidden;
-  width: 100%;
-  max-width: 30rem; /* limit the width of the cards to 30rem */
-  background-size: cover;
-  background-position: center;
-  transition: background 0.5s ease-out;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+aspect-ratio: 1/1;
+position: relative;
+padding: 2rem;
+color: #ffffff;
+text-decoration: none;
+overflow: hidden;
+width: 100%;
+max-width: 30rem; /* limit the width of the cards to 30rem */
+background-size: cover;
+background-position: center;
+transition: background 0.5s ease-out;
 }
 
 @media screen and (min-width: 768px) {
-  .auto-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* show three cards per row */
-  }
+.auto-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* show three cards per row */
+}
 
-  .cardGrid {
-    max-width: 100%;
-    height: 100%;
-    margin: 1rem;
-  }
+.cardGrid {
+  max-width: 100%;
+  height: 100%;
+  margin: 1rem;
+}
 }
 
 .cardGrid::before,
 .cardGrid::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  /*inset: 0;*/
-  top: 0;
-  left: 0;
+content: "";
+width: 100%;
+height: 100%;
+position: absolute;
+/*inset: 0;*/
+top: 0;
+left: 0;
 }
 
 .cardGrid::before {
-  background: linear-gradient(
-    to top,
-    hsla(0, 0%, 0%, 0.79) 0%,
-    hsl(0 0% 0% / 0.787) 7.8%,
-    hsl(0 0% 0% / 0.779) 14.4%,
-    hsl(0 0% 0% / 0.765) 20.2%,
-    hsl(0 0% 0% / 0.744) 25.3%,
-    hsl(0 0% 0% / 0.717) 29.9%,
-    hsl(0 0% 0% / 0.683) 34.3%,
-    hsl(0 0% 0% / 0.641) 38.7%,
-    hsl(0 0% 0% / 0.592) 43.3%,
-    hsl(0 0% 0% / 0.534) 48.4%,
-    hsl(0 0% 0% / 0.468) 54.1%,
-    hsl(0 0% 0% / 0.393) 60.6%,
-    hsl(0 0% 0% / 0.31) 68.3%,
-    hsl(0 0% 0% / 0.216) 77.3%,
-    hsl(0 0% 0% / 0.113) 87.7%,
-    hsl(0 0% 0% / 0) 100%
-  );
-  background: linear-gradient(to top, #99ebbb, transparent);
-  transition: 300ms opacity linear;
+background: linear-gradient(
+  to top,
+  hsla(0, 0%, 0%, 0.79) 0%,
+  hsl(0 0% 0% / 0.787) 7.8%,
+  hsl(0 0% 0% / 0.779) 14.4%,
+  hsl(0 0% 0% / 0.765) 20.2%,
+  hsl(0 0% 0% / 0.744) 25.3%,
+  hsl(0 0% 0% / 0.717) 29.9%,
+  hsl(0 0% 0% / 0.683) 34.3%,
+  hsl(0 0% 0% / 0.641) 38.7%,
+  hsl(0 0% 0% / 0.592) 43.3%,
+  hsl(0 0% 0% / 0.534) 48.4%,
+  hsl(0 0% 0% / 0.468) 54.1%,
+  hsl(0 0% 0% / 0.393) 60.6%,
+  hsl(0 0% 0% / 0.31) 68.3%,
+  hsl(0 0% 0% / 0.216) 77.3%,
+  hsl(0 0% 0% / 0.113) 87.7%,
+  hsl(0 0% 0% / 0) 100%
+);
+background: linear-gradient(to top, #99ebbb, transparent);
+transition: 300ms opacity linear;
 }
 
 
 .cardGrid::after {
-  background: linear-gradient(
-    45deg,
-    hsl(5 97% 63% / 0.7) 0,
-    hsl(5 97% 63% / 0) 100%
-  );
-  opacity: 0;
-  transition: 300ms opacity linear;
+background: linear-gradient(
+  45deg,
+  hsl(5 97% 63% / 0.7) 0,
+  hsl(5 97% 63% / 0) 100%
+);
+opacity: 0;
+transition: 300ms opacity linear;
 }
 
 .cardGrid > * {
-  z-index: 1;
+z-index: 1;
 }
 
 .cardGrid img {
-  opacity: 0;
-  position: absolute;
-  z-index: -1;
-  filter: grayscale(1);
-  transition: filter 200ms ease, transform 250ms linear;
+opacity: 0;
+position: absolute;
+z-index: -1;
+filter: grayscale(1);
+transition: filter 200ms ease, transform 250ms linear;
 
 }
 
 .cardGrid:hover::after {
-  opacity: 1;
+opacity: 1;
 }
 
 .cardGrid:hover {
-  transform: translateY(-10px); /* added transform effect on hover */
+transform: translateY(-10px); /* added transform effect on hover */
 }
 
 .cardGrid:hover img {
-  opacity: 1;
-  
+opacity: 1;
+
 }
 
 
 .cardGrid h2,
 .cardGrid p {
-  transform: translateY(2ex);
-  color:#fff;
+transform: translateY(2ex);
+color:#fff;
 }
 
 .cardGrid h2 {
- 
-  font-size: 1.7rem;
-  line-height: 1.2;
-  font-weight: 900;
-  letter-spacing: 0.03ch;
-  transition: 300ms transform ease;
+
+font-size: 1.7rem;
+line-height: 1.2;
+font-weight: 900;
+letter-spacing: 0.03ch;
+transition: 300ms transform ease;
 }
 
 .cardGrid p {
-  font-size: 1.2rem;
-  font-weight: 500;
+font-size: 1.2rem;
+font-weight: 500;
 }
 
 .cardGrid p {
-  opacity: 0;
-  transition: 300ms opacity linear, 300ms transform ease-in-out;
+opacity: 0;
+transition: 300ms opacity linear, 300ms transform ease-in-out;
 }
 
 .cardGrid:focus {
-  outline: 0.5rem solid white;
-  outline-offset: -0.5rem;
+outline: 0.5rem solid white;
+outline-offset: -0.5rem;
 }
 
 .cardGrid:hover :is(h2, p),
 .card:focus :is(h2, p) {
-  transform: none;
+transform: none;
 }
 
 .cardGrid:hover::after,
 .cardGrid:focus::after,
 .cardGrid:hover::before,
 .cardGrid:focus::before {
-  opacity: 0.7;
+opacity: 0.7;
 }
 
 .cardGrid:hover p,
 .cardGrid:focus p {
-  opacity: 1;
-  transition-delay: 200ms;
+opacity: 1;
+transition-delay: 200ms;
 }
 
 .cardGrid:hover img,
 .cardGrid:focus img {
-  filter: grayscale(0);
-  transform: scale(1.05) rotate(1deg);
+filter: grayscale(0);
+transform: scale(1.05) rotate(1deg);
 }
 
 
 .card__name{
-  font-family: "Inter", sans-serif;
-  font-size: 3rem !important;
-  font-weight: 900 ;
-  padding-top: 30%;
-  
+font-family: "Inter", sans-serif;
+font-size: 3rem !important;
+font-weight: 900 ;
+padding-top: 30%;
+
 }
 
 .catP{
-  padding-bottom:15% !important ;
-  padding-top: 10% !important;
-  font-size: 2.5rem !important;
-  line-height: normal;
-  text-align: left;
+padding-bottom:15% !important ;
+padding-top: 10% !important;
+font-size: 2.5rem !important;
+line-height: normal;
+text-align: left;
 }
 
 
 
 /*******CATALOGUE GRID END*******/
+
