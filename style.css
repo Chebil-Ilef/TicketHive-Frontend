@@ -236,9 +236,13 @@ h5 {
 
 .operations {
   max-width: 100rem;
-  margin: 12rem auto 0 auto;
-
-  background-color: #fff;
+  /* margin: 12rem auto 0 auto; */
+  border-radius: 10px;
+  background-color: transparent;
+  position: relative;
+  /* max-width: 48rem; */
+  margin: 0 auto 0 auto;
+  /* border: 1px solid var(--color-primary); */
 }
 
 .operations__tab-container {
@@ -335,6 +339,74 @@ h5 {
 .operations__icon--3 svg {
   fill: var(--color-tertiary);
 }
+
+.slider1{
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.72rem;
+  border-radius: 10px;
+}
+
+.slider1::-webkit-scrollbar{
+  width: 0;
+  background-color: transparent;
+}
+
+.slider1 img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+
+.slider1-nav{
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider1-nav a{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.text{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 5rem;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.text p{
+  color: white;
+  font-size: 30px;
+}
+
+.text p span{
+  font-size: 20px;
+  
+}
+
+.slider1:hover .text{
+  opacity: 1;
+}
+
 
 /* SLIDER */
 .slider {
