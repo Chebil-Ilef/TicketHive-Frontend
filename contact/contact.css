@@ -29,18 +29,45 @@
 
 .contact .content h2 
 {
+    position: relative;
     font-size: 36px;
     font-weight: 500;
     color: #fff ;
 }
 
+.contact .content h2::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #231955;
+    animation: showRight 4s ease forwards;
+    animation-delay: 1s;
+    }
+
 .contact .content p 
 {
+    position: relative;
     margin-top: 10px;
     text-align: left;
     font-weight: 300;
     color: #fff;
 }
+
+.contact .content P::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #231955;
+    animation: showRight 4s ease forwards;
+    animation-delay: 3s;
+    }
+
 
 .container
 {
@@ -210,3 +237,9 @@
     transition: all 0.3s;
   }
   
+  @keyframes showRight {
+    100%{
+        width: 0;
+    }
+    
+}

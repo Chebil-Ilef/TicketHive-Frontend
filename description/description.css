@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+body{
+    color: beige;
+}
+
+.home{
+background: url('fond2.png') no-repeat;
+background-size: cover;
+background-position: center;    
+height: 108vh;
+display: flex;
+align-items: center;
+padding: 0 10%;
+}
+
+.home-content {
+max-width: 600px;
+width: 500px;
+}
+
+.home-content h1 {
+position: relative;    
+font-size: 56px;
+font-weight: 700;
+}
+
+/*.home-content h1::before{
+content:'';
+position: absolute;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+background: #231955;
+animation: showRight 1s ease forwards;
+animation-delay: 1s;
+}*/
+
+.home-content h3{
+position: relative;    
+font-size: 32px;
+font-weight: 700;
+color: #00abf0;
+}
+
+/*.home-content h3::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #231955;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+}*/
+
+.home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+} 
+
+    
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; 
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px; 
+    color: #081629;
+    text-decoration: none;
+    font-weight: 600; 
+    letter-spacing: 1px;
+    z-index: 1 ;
+    overflow : hidden ;    
+}
+
+.btn-box a:hover{
+    color: #00abf0;
+} 
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) :hover 
+{ 
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abfe;
+}
+
+
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+@keyframes showRight {
+    100%{
+        width: 0;
+    }
+    
+}
