@@ -123,7 +123,9 @@
 .contactForm
 {
     width: 400px;
+    height: 420px;
     height: 400px;
+
     padding: 3%; 
     border-radius: 30px;
     background: #fff;
