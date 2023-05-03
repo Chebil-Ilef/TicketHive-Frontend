@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ asset('assets/css/main/style.css') }}" />
+    <title>TicketHive</title>
+
+    <script defer src="{{ asset('assets/js/main/script.js') }}"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- Nav Bar -->
+      <nav class="nav">
+        <img src="#" alt="*logo" class="nav__logo" id="logo" />
+        <a class="navbar-brand" href="">TicketHive</a>
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Events</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">Catalogue</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Testimonials</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="#"
+              >Log in</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__title">
+        <h1>
+          Experience
+          <!-- Green highlight effect -->
+          <span class="highlight">Effortless</span>
+          Ticket<br />
+          Buying for Your
+          <span class="highlight">Favorite</span>
+          Event
+        </h1>
+        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+      </div>
+    </header>
+
+    <section class="section section--hidden" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">Events</h2>
+        <h3 class="section__header">Go out and have fun You only live once.</h3>
+      </div>
+
+      <div class="operations">
+        <div class="operations__tab-container">
+          <button
+            class="btn operations__tab operations__tab--1 operations__tab--active"
+            data-tab="1"
+          >
+            <span>01</span>Today
+          </button>
+          <button class="btn operations__tab operations__tab--2" data-tab="2">
+            <span>02</span>This Weekend
+          </button>
+          <button class="btn operations__tab operations__tab--3" data-tab="3">
+            <span>03</span>Coming Soon
+          </button>
+        </div>
+        <div class="slider1">
+          <img src="https://media.timeout.com/images/105885233/750/422/image.jpg" id="slide1">
+          <img src="https://thefox.com.au/wp-content/uploads/2020/01/144A1391-1024x683.jpg" id="slide2">
+          <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?cs=srgb&dl=pexels-wendy-wei-1190298.jpg&fm=jpg" id="slide3">
+          <img src="https://media.istockphoto.com/id/1279483477/photo/we-are-going-to-party-as-if-theres-no-tomorrow.jpg?s=612x612&w=0&k=20&c=wPmd1hxQEDxhG2P-OwDW3EJ0WoyuW-lEBsPa8O09bwU=" id="slide4">
+          <div class="slider1-nav">
+            <a href="#slide1"></a>
+            <a href="#slide2"></a>
+            <a href="#slide3"></a>
+            <a href="#slide4"></a>
+          </div>
+          <div class="text">
+            <p>
+              Welcome to the party<br>
+              <span class="small">Sousse 12/09/2023</span>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <article class="flow section section--hidden" id="section--2">
+      <h1 class="catalogueTitle catalogue-animation ">Our Catalogue</h1>
+      <div style="font-size: 1.5rem; text-align: center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+        Simply hover over the cards to get a sneak peek of the events,<br>or click on a category to dive deeper into the world of entertainment<br>and purchase your tickets! 🎟️
+      </div>
+      <div class="team">
+        <ul class="auto-grid" role="list">
+          <li>
+            <a href="{{ path('event')}}" target="_blank" class="cardGrid" style="background-image: url('{{ asset('assets/images/main/catalogue/festivals.jpg') }}');">
+              <h2 class="card__name">Festivals</h2>
+              <p class="catP">Discover the hottest festivals in town and experience the ultimate party scene.</p>
+            </a>
+          </li>
+          <li>
+            <a href="{{ path('event')}}" target="_blank" class="cardGrid" style="background-image: url('{{ asset('assets/images/main/catalogue/sport.jpg') }}');">
+              <h2 class="card__name">Sport</h2>
+              <p class="catP">Get your adrenaline pumping with our thrilling sports events and buy your tickets now.</p>
+            </a>
+          </li>
+          <li>
+            <a href="{{ path('event')}}" target="_blank" class="cardGrid" style="background-image: url('{{ asset('assets/images/main/catalogue/concerts.jpg') }}');">
+              <h2 class="card__name">Concerts</h2>
+              <p class="catP">Immerse yourself in the music and attend the most happening concerts in the city.</p>
+            </a>
+          </li>
+      
+          <li>
+            <a href="{{ path('event')}}" target="_blank" class="cardGrid" style="background-image: url('{{ asset('assets/images/main/catalogue/theatre.jpg') }}');">
+              <h2 class="card__name">Theatre</h2>
+              <p class="catP">Indulge in the world of drama and witness the finest plays and theatre performances.</p>
+            </a>
+          </li>
+          <li>
+            <a href="{{ path('event')}}" target="_blank" class="cardGrid" style="background-image: url('{{ asset('assets/images/main/catalogue/cinema.jpg') }}');">
+              <h2 class="card__name">Cinema</h2>
+              <p class="catP">Get your popcorn ready and browse our collection of movies and cinema experiences.</p>
+            </a>
+          </li>
+          <li>
+            <a href="{{ path('event')}}" target="_blank" class="cardGrid" style="background-image: url('{{ asset('assets/images/main/catalogue/other.jpg') }}');">
+              <h2 class="card__name">Other</h2>
+              <p class="catP">Explore a diverse range of unique events that don't fit into the other categories.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    
+
+    <section class="section section--hidden" id="section--3">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">Not sure yet?</h2>
+        <h3 class="section__header">
+          New lifestyle coming ahead with our events.
+        </h3>
+      </div>
+
+      <div class="slider">
+        <div class="slide slide--1">
+          <div class="testimonial">
+            <h5 class="testimonial__header">Best Place ever!</h5>
+            <blockquote class="testimonial__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Accusantium quas quisquam non? Quas voluptate nulla minima
+              deleniti optio ullam nesciunt, numquam corporis et asperiores
+              laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+              id alias reiciendis, perferendis facere pariatur dolore veniam
+              autem esse non voluptatem saepe provident nihil molestiae.
+            </blockquote>
+            <!-- <address class="testimonial__author">
+              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Aarav Lynn</h6>
+              <p class="testimonial__location">San Francisco, USA</p>
+            </address> -->
+          </div>
+        </div>
+
+        <div class="slide slide--2">
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              The first step to get above social anxiety!
+            </h5>
+            <blockquote class="testimonial__text">
+              Quisquam itaque deserunt ullam, quia ea repellendus provident,
+              ducimus neque ipsam modi voluptatibus doloremque, corrupti
+              laborum. Incidunt numquam perferendis veritatis neque repellendus.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+              deserunt exercitationem deleniti.
+            </blockquote>
+            <!-- <address class="testimonial__author">
+              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Miyah Miles</h6>
+              <p class="testimonial__location">London, UK</p>
+            </address> -->
+          </div>
+        </div>
+
+        <div class="slide slide--3">
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              Finally free from old-school ticket booking!
+            </h5>
+            <blockquote class="testimonial__text">
+              Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+              incidunt commodi architecto numquam omnis nulla autem,
+              necessitatibus blanditiis modi similique quidem. Odio aliquam
+              culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
+              deleniti saepe aliquid quos inventore sequi. Necessitatibus id
+              alias reiciendis, perferendis facere.
+            </blockquote>
+            <!-- <address class="testimonial__author">
+              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Francisco Gomes</h6>
+              <p class="testimonial__location">Lisbon, Portugal</p>
+            </address> -->
+          </div>
+        </div>
+
+        <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
+        <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
+        <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
+        <button class="slider__btn slider__btn--left"><</button>
+        <button class="slider__btn slider__btn--right">></button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+
+    <section class="section section--feedback section--hidden">
+      <div class="section__title">
+        <h2 class="section__description">You have something to say ?</h2>
+        <h3 class="section__header">Give us your feedback !</h3>
+      </div>
+
+      <div class="field-group">
+      <form action="index.html" method="post">
+        <textarea name="feedback" id="feedback" cols="30" rows="10" class="textarea-field" placeholder="Enter Feedback"></textarea>
+        <!-- <label for="feedback" class="textarea-label">Enter your message</label> -->
+        <input type="submit" name="fsubmit" class="btn btn--show-modal">
+      </form>
+      </div>
+    </section>
+
+    <section class="section section--sign-up section--hidden">
+      <div class="section__title">
+        <h3 class="section__header">
+          The best day to join us is TODAY. The second best is now!
+        </h3>
+      </div>
+      <button class="btn btn--show-modal">Open your free account today!</button>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" href="#">About</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Pricing</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Terms of Use</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Privacy Policy</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Careers</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Blog</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <img src="#" alt="Logo" class="footer__logo" />
+    </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Open your account <br />
+        in just <span class="highlight"> 5 minutes</span>
+      </h2>
+      <form class="modal__form form-box login">
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><i class="bx bxs-envelope"></i></span>
+            <input type="email" name="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+            <input type="password" name="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><input type="checkbox" name="remember" />Remember me</label
+            >
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" name="signin" class="btn">Sign In</button>
+          <div class="login-register">
+            <p>
+              Don't have an account?
+              <a href="{{ path('login_signup')}}" class="register-link">Sign up</a>
+            </p>
+          </div>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
+</html>
