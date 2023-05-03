@@ -35,6 +35,7 @@ body {
 .section {
   padding: 15rem 3rem;
   border-top: 1px solid #ddd;
+
   transition: transform 1s, opacity 1s;
 }
 
@@ -531,7 +532,7 @@ h5 {
 
 @media all and (max-width: 660px) {
   .section__title--testimonials {
-    font-size: 45%;
+    size: 45%;
     text-align: center;
   }
 
@@ -544,21 +545,49 @@ h5 {
   }
 
   .slider__btn {
-    font-size: 50%;
+    size: 50%;
   }
 }
+
+/* .testimonial__author {
+  margin-left: 3rem;
+  font-style: normal;
+
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  column-gap: 2rem;
+} */
+
+/* .testimonial__photo {
+  visibility: hidden;
+  grid-row: 1 / span 2;
+  width: 6.5rem;
+  border-radius: 50%;
+} */
+
+/* .testimonial__name {
+  font-size: 1.7rem;
+  font-weight: 500;
+  align-self: end;
+  margin: 0;
+} */
+
+/* .testimonial__location {
+  font-size: 1.5rem;
+} */
 
 .section__title--testimonials {
   margin-bottom: 4rem;
 }
 
-/* FEEDBACK */
+/* FEEDBACK*/
 .section--feedback {
   min-height: 100vh;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 20em;
+  /* grid-row-gap: 10px; */
   grid-column-gap: 10px;
   text-align: center;
   justify-content: center;
@@ -570,7 +599,6 @@ h5 {
   position: relative;
   overflow: hidden;
 }
-
 .textarea-field {
   width: 100%;
   outline: 0;
@@ -584,9 +612,8 @@ h5 {
   z-index: 1;
   font-size: 2em;
   resize: none;
-  transition: 0.3s ease;
+  transform: 0.3s ease;
 }
-
 .textarea-label {
   position: absolute;
   top: 0;
@@ -596,14 +623,12 @@ h5 {
   color: #e4e4e4;
   text-transform: uppercase;
   border-radius: 10px;
-  transition: 0.3s ease;
+  transition: 0.3 ease;
 }
-
 .textarea-field:focus {
   border-color: #00ffdd;
   padding: 5px 5px 20px 5px;
 }
-
 .textarea-field:focus + .textarea-label {
   top: 100%;
   background-color: var(--gradient-primary);
@@ -614,14 +639,12 @@ h5 {
   color: #e4e4e4;
   z-index: 2;
 }
-
 .textarea-field::-webkit-scrollbar {
   width: 20px;
   background-color: #e4e4e4;
   z-index: 100;
   border-radius: 10px;
 }
-
 .textarea-field::-webkit-scrollbar-thumb {
   background-color: var(--color-tertiary);
   box-shadow: 0 -100vh 0 100vh #e4e4e4;
@@ -672,44 +695,33 @@ h5 {
 
 /* FOOTER */
 .footer {
-  padding: 5rem 3rem;
+  padding: 10rem 3rem;
   background-color: #37383d;
-  }
-  
-  .footer__nav {
+}
+
+.footer__nav {
   list-style: none;
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 0;
-  }
-  
-  .footer__item {
-  margin-right: 2rem;
-  }
-  
-  .footer__link {
-  font-size: 1.4rem;
+  margin-bottom: 5rem;
+}
+
+.footer__item {
+  margin-right: 4rem;
+}
+
+.footer__link {
+  font-size: 1.6rem;
   color: #eee;
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
-  }
-  
-  .footer__link:hover {
-  color: #87f7e6;
-  font-size: 1.5rem;
-  }
-  
-  
-  
-  .footer__logo {
-  height: 3rem;
+}
+
+.footer__logo {
+  height: 5rem;
   display: block;
   margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  }
-  /***FOOTER END***/
+  margin-bottom: 5rem;
+}
 
 /* MODAL WINDOW */
 .modal {
@@ -746,6 +758,32 @@ h5 {
   margin-bottom: 4.5rem;
   line-height: 1.5;
 }
+
+/* .modal__form {
+  margin: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 2.5rem;
+} */
+
+/* .modal__form label {
+  font-size: 1.7rem;
+  font-weight: 500;
+} */
+
+/* .modal__form input {
+  font-size: 1.7rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+} */
+
+/* .modal__form button {
+  grid-column: 1 / span 2;
+  justify-self: center;
+  margin-top: 1rem;
+} */
 
 .btn--close-modal {
   font-family: inherit;
@@ -796,7 +834,7 @@ h5 {
 }
 
 .input-box input:focus ~ label,
-.input-box input:valid~ label {
+.input-box input:valid ~ label {
   top: -5px;
 }
 
@@ -842,14 +880,17 @@ h5 {
   text-decoration: none;
 }
 
-.login-register p a:hover {
+.login-register p a {
   text-decoration: underline;
 }
+
 
 /*******CATALOGUE GRID*******/
 #section--2{
   font-family: "Inter", sans-serif;
   padding: 10rem 5rem 10rem 5rem;
+  border-top: 1px solid #ddd;
+  transition: transform 1s, opacity 1s;
   text-align: center;
   background: #231955;
 
@@ -870,22 +911,56 @@ color: currentcolor;
 .auto-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr); /* show three cards per row */
+grid-gap: var(--auto-grid-gap, 0);
+padding: 0;
 justify-items: center; /* center the cards horizontally */
 }
 
+.flow > * + * {
+margin-top: var(--flow-space, 1em);
+}
+
+.team li:nth-child(n+4) {
+  margin-top: -4.5em; /* add space between the first and second row of cards */
+}
+
+@media screen and (min-width: 768px) {
+  .auto-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* show three cards per row */
+   
+}
+}
+.cardGrid {
+  max-width: 100%;
+  height: 100%;
+  margin: 1rem;
+}
+
+/* Composition */
+.team {
+--flow-space: 2em;
+display: flex;
+flex-wrap: wrap; /* allow the cards to wrap to a new line */
+justify-content: center; /* center the cards vertically */
+}
+
+
+
 /* Blocks */
 .cardGrid {
-max-width: 100%;
-height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
+aspect-ratio: 1/1;
 position: relative;
 padding: 2rem;
 text-decoration: none;
+overflow: hidden;
+width: 90%;
 max-width: 20rem; /* limit the width of the cards to 20rem */
 background-size: cover;
 background-position: center;
+transition: background 0.5s ease-out;
 }
 
 @media screen and (min-width: 768px) {
@@ -906,6 +981,7 @@ content: "";
 width: 100%;
 height: 100%;
 position: absolute;
+/*inset: 0;*/
 top: 0;
 left: 0;
 }
@@ -917,11 +993,20 @@ background: linear-gradient(
   hsla(157, 89%, 78%, 0.787) 7.8%,
   hsl(0 0% 0% / 0.779) 14.4%,
   hsl(0 0% 0% / 0.765) 20.2%,
+  hsl(0 0% 0% / 0.744) 25.3%,
+  hsl(0 0% 0% / 0.717) 29.9%,
+  hsla(0, 0%, 0%, 0.683) 34.3%,
+  hsl(0 0% 0% / 0.641) 38.7%,
+  hsl(0 0% 0% / 0.592) 43.3%,
+  hsl(0 0% 0% / 0.534) 48.4%,
   hsl(0 0% 0% / 0.468) 54.1%,
   hsl(0 0% 0% / 0.393) 60.6%,
   hsl(0 0% 0% / 0.31) 68.3%,
+  hsl(0 0% 0% / 0.216) 77.3%,
+  hsl(0 0% 0% / 0.113) 87.7%,
   hsl(0 0% 0% / 0) 100%
 );
+transition: 300ms opacity linear;
 }
 
 
@@ -929,15 +1014,27 @@ background: linear-gradient(
 background: linear-gradient(
   45deg,
   hsl(5 97% 63% / 0.7) 0,
-  hsl(0 0% 0% / 0) 100%
+  hsla(159, 68%, 53%, 0) 100%
 );
 opacity: 0;
+transition: 300ms opacity linear;
 }
 
 .cardGrid > * {
 z-index: 1;
 }
 
+.cardGrid img {
+  opacity: 1;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.cardGrid:hover::after {
+opacity: 1;
+}
 
 .cardGrid:hover {
 transform: translateY(-15px); /* added transform effect on hover */
@@ -954,12 +1051,17 @@ color:#fff;
 .cardGrid p {
 opacity: 0;
 transition: 300ms opacity linear, 300ms transform ease-in-out;
-} /*text animation up and down when hover P1*/
+}
+
+.cardGrid:focus {
+outline: 0.5rem solid white;
+outline-offset: -0.5rem;
+}
 
 .cardGrid:hover :is(h2, p),
 .card:focus :is(h2, p) {
 transform: none;
-}/*text animation up and down when hover P2*/
+}
 
 .cardGrid:hover::after,
 .cardGrid:focus::after,
@@ -983,9 +1085,9 @@ padding-top: 30%;
 }
 
 .catP{
-padding-bottom:15% ;
-padding-top: 10% ;
-font-size: 2.5rem;
+padding-bottom:15% !important ;
+padding-top: 10% !important;
+font-size: 2.5rem !important;
 line-height: normal;
 text-align: left;
 }
@@ -995,6 +1097,17 @@ text-align: left;
 
 
 /*******Letter By Letter Animation CSS+JS********/
+.catalogue-section {
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.catalogue-animation {
+  font-size: 5rem;
+  font-family: sans-serif;
+  position: relative;
+  display: inline-block;
+}
 
 .catalogue-animation span {
   display: inline-block;
@@ -1018,4 +1131,4 @@ text-align: left;
     opacity: 1;
   }
 }
-/*******Letter By Letter Animation CSS+JS END ********/
+
