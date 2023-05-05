@@ -1,0 +1,347 @@
+:root {
+  --color-primary: #00ffdd;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #89c4a3;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #00ffdd);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #f3f3f3;
+  line-height: 1.9;
+  background-color: #231955;
+}
+
+
+.modal-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+
+.modal {
+ 
+  position: relative;
+  background-color: #f3f3f3;
+  color: black;
+  text-align: center;
+  padding: 40px;
+  padding-top: 100px;
+  padding-right: 350px;
+  padding-left: 300px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.modal__header {
+  font-size: 30px;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+}
+
+
+.form-box .input-box {
+  position: relative;
+  width: 340px;
+  border-bottom: 2px solid #e4e4e4;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #231955;
+  font-weight: 500;
+  padding-right: 28px;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid~ label {
+  top: -5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  font-size: 19px;
+}
+
+/*style pour la section ajout produit*/
+.cart-box{
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-img
+{
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+  padding: 10px;
+}
+.detail-box{
+  margin-right: 6rem;
+  display: grid;
+  row-gap: 0.5rem;
+}
+.cart-product-title{
+  font-size: 1.2rem ;
+  text-transform: uppercase;
+}
+.cart-price{
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.cart-quantity{
+  border: 2px solid var (--text-color);
+  border-width: 1.8px;
+  outline-color: var (--main-color);
+  width: 5.5rem;
+  height: 2.3rem ;
+  text-align: center; 
+  font-size: 1rem;
+  margin-left: 5.5rem;
+}
+.cart-remove{
+  font-size: 24px;
+  color: var(--color-tertiary-darker);
+  cursor: pointer;
+}
+
+
+/* style pour la section du panier (total+bouton) */
+.payer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-10px, 10px);
+  border: none;
+}
+.cart-section hr {
+  width: 100%;
+  margin: 20px 0;
+}
+.form-box .remember-forgot {
+  font-size: 14.5px;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-darker);
+}
+
+.btn--text {
+  display: inline-block;
+  background: none;
+  font-size: 1.7rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--color-primary);
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+
+
+.modal {
+  height: 85%;
+  width: 45%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  color: black;
+  text-align: center;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.modal__header {
+  font-size: 3.25rem;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.form-box .input-box {
+  position: relative;
+  width: 340px;
+  height: 50px;
+  border-bottom: 2px solid #e4e4e4;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #231955;
+  font-weight: 500;
+  padding-right: 28px;
+}
+
+
+
+.input-box .icon {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  font-size: 19px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
