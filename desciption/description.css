@@ -294,6 +294,36 @@ span {
 }
 
 .line4 {
+  color: white;
+  -webkit-animation: type 0.5s 7.5s steps(20, end) forwards;
+  -moz-animation: type 0.5s 7.5s steps(20, end) forwards;
+  -o-animation: type 0.5s 7.5s steps(20, end) forwards;
+  animation: type 0.5s 7.5s steps(20, end) forwards;
+}
+
+.cursor4 {
+  -webkit-animation: blink 1s 8.5s 2 forwards;
+  -moz-animation: blink 1s 8.5s 2 forwards;
+  -o-animation: blink 1s 8.5s 2 forwards;
+  animation: blink 1s 8.5s 2 forwards;
+}
+
+.line5 {
+  color: white;
+  -webkit-animation: type 0.5s 7.5s steps(20, end) forwards;
+  -moz-animation: type 0.5s 7.5s steps(20, end) forwards;
+  -o-animation: type 0.5s 7.5s steps(20, end) forwards;
+  animation: type 0.5s 7.5s steps(20, end) forwards;
+}
+
+.cursor5 {
+  -webkit-animation: blink 1s 8.5s 2 forwards;
+  -moz-animation: blink 1s 8.5s 2 forwards;
+  -o-animation: blink 1s 8.5s 2 forwards;
+  animation: blink 1s 8.5s 2 forwards;
+}
+
+.line6 {
   color: #fff;
   -webkit-animation: type 0.5s 10.75s steps(20, end) forwards;
   -moz-animation: type 0.5s 10.75s steps(20, end) forwards;
@@ -301,7 +331,7 @@ span {
   animation: type 0.5s 10.75s steps(20, end) forwards;
 }
 
-.cursor4 {
+.cursor6 {
   -webkit-animation: blink 1s 11.5s infinite;
   -moz-animation: blink 1s 8.5s infinite;
   -o-animation: blink 1s 8.5s infinite;
