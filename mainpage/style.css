@@ -692,7 +692,7 @@ h5 {
 
 /* FOOTER */
 .footer {
-  padding: 10rem 3rem;
+  padding: 5rem 3rem;
   background-color: #37383d;
 }
 
@@ -700,7 +700,6 @@ h5 {
   list-style: none;
   display: flex;
   justify-content: center;
-  margin-bottom: 5rem;
 }
 
 .footer__item {
@@ -708,17 +707,28 @@ h5 {
 }
 
 .footer__link {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #eee;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
+
+.footer__link:hover {
+  color: #87f7e6;
+  font-size: 1.5rem;
+  }
+
 
 .footer__logo {
   height: 5rem;
   display: block;
   margin: 0 auto;
-  margin-bottom: 5rem;
-}
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease-in-out;
+
+  }
 
 /* MODAL WINDOW */
 .modal {
@@ -990,20 +1000,11 @@ h5 {
     hsla(157, 89%, 78%, 0.787) 7.8%,
     hsl(0 0% 0% / 0.779) 14.4%,
     hsl(0 0% 0% / 0.765) 20.2%,
-    hsl(0 0% 0% / 0.744) 25.3%,
-    hsl(0 0% 0% / 0.717) 29.9%,
-    hsla(0, 0%, 0%, 0.683) 34.3%,
-    hsl(0 0% 0% / 0.641) 38.7%,
-    hsl(0 0% 0% / 0.592) 43.3%,
-    hsl(0 0% 0% / 0.534) 48.4%,
     hsl(0 0% 0% / 0.468) 54.1%,
     hsl(0 0% 0% / 0.393) 60.6%,
     hsl(0 0% 0% / 0.31) 68.3%,
-    hsl(0 0% 0% / 0.216) 77.3%,
-    hsl(0 0% 0% / 0.113) 87.7%,
     hsl(0 0% 0% / 0) 100%
   );
-  transition: 300ms opacity linear;
 }
 
 .cardGrid::after {
@@ -1020,16 +1021,6 @@ h5 {
   z-index: 1;
 }
 
-.cardGrid img {
-  opacity: 1;
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-}
-
-.cardGrid:hover::after {
-  opacity: 1;
-}
 
 .cardGrid:hover {
   transform: translateY(-15px); /* added transform effect on hover */
@@ -1044,12 +1035,7 @@ h5 {
 .cardGrid p {
   opacity: 0;
   transition: 300ms opacity linear, 300ms transform ease-in-out;
-}
-
-.cardGrid:focus {
-  outline: 0.5rem solid white;
-  outline-offset: -0.5rem;
-}
+}/*text animation up and down when hovered*/
 
 .cardGrid:hover :is(h2, p),
 .card:focus :is(h2, p) {
@@ -1077,28 +1063,16 @@ h5 {
 }
 
 .catP {
-  padding-bottom: 15% !important ;
-  padding-top: 10% !important;
-  font-size: 2.5rem !important;
+  padding-bottom:15% ;
+  padding-top: 10% ;
+  font-size: 2.5rem;
   line-height: normal;
   text-align: left;
-}
+  }
 
 /*******CATALOGUE GRID END*******/
 
 /*******Letter By Letter Animation CSS+JS********/
-.catalogue-section {
-  padding: 2rem;
-  background-color: #f0f0f0;
-}
-
-.catalogue-animation {
-  font-size: 5rem;
-  font-family: sans-serif;
-  position: relative;
-  display: inline-block;
-}
-
 .catalogue-animation span {
   display: inline-block;
   opacity: 0;
@@ -1120,4 +1094,125 @@ h5 {
   to {
     opacity: 1;
   }
+}
+
+
+
+/*******CART STYLING CSS********/
+/*style pour la section ajout produit*/
+.cart-box{
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-img
+{
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+  padding: 10px;
+}
+.detail-box{
+  margin-right: 6rem;
+  display: grid;
+  row-gap: 0.5rem;
+}
+.cart-product-title{
+  font-size: 1.2rem ;
+  text-transform: uppercase;
+}
+.cart-price{
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.cart-quantity{
+  border: 2px solid var (--text-color);
+  border-width: 1.8px;
+  outline-color: var (--main-color);
+  width: 5.5rem;
+  height: 2.3rem ;
+  text-align: center; 
+  font-size: 1rem;
+  margin-left: 5.5rem;
+}
+.cart-remove{
+  font-size: 24px;
+  color: var(--color-tertiary-darker);
+  cursor: pointer;
+}
+
+
+/* style pour la section du panier (total+bouton) */
+.payer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-10px, 10px);
+  border: none;
+}
+.cart-section hr {
+  width: 100%;
+  margin: 20px 0;
+}
+.form-box .remember-forgot {
+  font-size: 14.5px;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__header {
+  font-size: 3.25rem;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+}
+
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.form-box .input-box {
+  position: relative;
+  width: 340px;
+  height: 50px;
+  border-bottom: 2px solid #e4e4e4;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #231955;
+  font-weight: 500;
+  padding-right: 28px;
+}
+
+
+
+.input-box .icon {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  font-size: 19px;
+}
+
+.cart-items-container {
+  height: 350px; 
+  overflow-y: scroll;
 }

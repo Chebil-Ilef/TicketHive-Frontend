@@ -8,37 +8,45 @@
 
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <link rel="stylesheet" href="style.css" />
-    <title>TicketHive</title>
+
+    <!--Font Awesome-->
+   <script src="https://kit.fontawesome.com/43124feaf5.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-NwFfTzlTnD8fO/LMq3rJgozu0zKjyO2QFzmsOwRJb/X8WbJveSW0L0R6YdX9U8W6U0p6w4z4N59GNYtk8Wuj5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+   <title>TicketHive</title>
+
 
     <script defer src="script.js"></script>
+    
   </head>
 
   <body>
     <header class="header">
       <!-- Nav Bar -->
-      <nav class="nav">
-        <img src="#" alt="*logo" class="nav__logo" id="logo" />
-        <a class="navbar-brand" href="">TicketHive</a>
-        <ul class="nav__links">
-          <li class="nav__item">
-            <a class="nav__link" href="#section--1">Events</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--2">Catalogue</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--3">Testimonials</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--btn btn--show-modal" href="#"
-              >Log in</a
-            >
-          </li>
-        </ul>
-      </nav>
+  <nav class="nav">
+    <img src="#" alt="*logo" class="nav__logo" id="logo" />
+    <a class="navbar-brand" href="">TicketHive</a>
+    <ul class="nav__links">
+      <li class="nav__item">
+        <a class="nav__link" href="#section--1">Events</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#section--2">Catalogue</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#section--3">Testimonials</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link nav__link--btn btn--show-modal" href="#">Log in</a>
+      </li>
+      <li class="nav__item">
+        <a id="open-cart-icon" href="#"><i class="fa-solid fa-cart-shopping" style="color:#00ffdd; font-size: 2em;"></i> </a>
+      </li>          
+    </ul>
+  </nav>
+
 
       <div class="header__title">
         <h1>
@@ -97,7 +105,7 @@
       </div>
     </section>
 
-    <article class="flow section section--hidden" id="section--2">
+    <section class="flow section" id="section--2">
       <h1 class="catalogueTitle catalogue-animation ">Our Catalogue</h1>
       <div style="font-size: 1.5rem; text-align: center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
         Simply hover over the cards to get a sneak peek of the events,<br>or click on a category to dive deeper into the world of entertainment<br>and purchase your tickets! 🎟️
@@ -105,45 +113,45 @@
       <div class="team">
         <ul class="auto-grid" role="list">
           <li>
-            <a href="#" target="_blank" class="cardGrid" style="background-image: url('images/festivals.jpg');">
+            <a href="event_filter/TICKET.HTML" target="_blank" class="cardGrid" style="background-image: url('images/festivals.jpg');">
               <h2 class="card__name">Festivals</h2>
               <p class="catP">Discover the hottest festivals in town and experience the ultimate party scene.</p>
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" class="cardGrid" style="background-image: url('images/sport.jpg');">
+            <a href="event_filter/TICKET.HTML" target="_blank" class="cardGrid" style="background-image: url('images/sport.jpg');">
               <h2 class="card__name">Sport</h2>
               <p class="catP">Get your adrenaline pumping with our thrilling sports events and buy your tickets now.</p>
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" class="cardGrid" style="background-image: url('images/concerts.jpg');">
+            <a href="event_filter/TICKET.HTML" target="_blank" class="cardGrid" style="background-image: url('images/concerts.jpg');">
               <h2 class="card__name">Concerts</h2>
               <p class="catP">Immerse yourself in the music and attend the most happening concerts in the city.</p>
             </a>
           </li>
       
           <li>
-            <a href="#" target="_blank" class="cardGrid" style="background-image: url('images/theatre.jpg');">
+            <a href="event_filter/TICKET.HTML" target="_blank" class="cardGrid" style="background-image: url('images/theatre.jpg');">
               <h2 class="card__name">Theatre</h2>
               <p class="catP">Indulge in the world of drama and witness the finest plays and theatre performances.</p>
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" class="cardGrid" style="background-image: url('images/cinema.jpg');">
+            <a href="event_filter/TICKET.HTML" target="_blank" class="cardGrid" style="background-image: url('images/cinema.jpg');">
               <h2 class="card__name">Cinema</h2>
               <p class="catP">Get your popcorn ready and browse our collection of movies and cinema experiences.</p>
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" class="cardGrid" style="background-image: url('images/other.jpg');">
+            <a href="event_filter/TICKET.HTML" target="_blank" class="cardGrid" style="background-image: url('images/other.jpg');">
               <h2 class="card__name">Other</h2>
               <p class="catP">Explore a diverse range of unique events that don't fit into the other categories.</p>
             </a>
           </li>
         </ul>
       </div>
-    </article>
+    </section>
     
 
     <section class="section section--hidden" id="section--3">
@@ -250,33 +258,6 @@
       <button class="btn btn--show-modal">Open your free account today!</button>
     </section>
 
-    <footer class="footer">
-      <ul class="footer__nav">
-        <li class="footer__item">
-          <a class="footer__link" href="#">About</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Pricing</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Terms of Use</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Privacy Policy</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Careers</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Blog</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Contact Us</a>
-        </li>
-      </ul>
-      <img src="#" alt="Logo" class="footer__logo" />
-    </footer>
-
     <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
@@ -296,9 +277,7 @@
             <label>Password</label>
           </div>
           <div class="remember-forgot">
-            <label
-              ><input type="checkbox" name="remember" />Remember me</label
-            >
+            <label><input type="checkbox" name="remember" />Remember me</label>
             <a href="#">Forgot password?</a>
           </div>
 
@@ -306,11 +285,94 @@
           <div class="login-register">
             <p>
               Don't have an account?
-              <a href="login_signup_page/index.html" class="register-link">Sign up</a>
+              <a href="login_signup_page\index.html" target="_blank" class="register-link">Sign up</a>
             </p>
           </div>
       </form>
     </div>
     <div class="overlay hidden"></div>
+
+
+    
+    <!-- CART MODAL WINDOWS -->
+    <div class="modal-container hidden">
+      <div class="modal">
+        <button class="btn--close-modal close-button" id="close-btn">&times;</button>
+        <!-- hne -->
+    
+        <h2 class="modal__header">
+          Shopping Cart
+        </h2>
+        <form class="modal__form form-box login action="#"">
+    
+                <div <div class="cart-items-container">
+                  <div class="cart-box">
+                    <img src="images/event.jpg" alt="" class="cart-img"> 
+                    <div class="detail-box">
+                        <div class="cart-product-title">Earbuds</div> 
+                        <div class="cart-price">$10</div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <!-- Remove Cart -->
+                    <i class='fas fa-trash-alt cart-remove'></i>
+                  </div>
+                  <div class="cart-box">
+                    <img src="images/event.jpg" alt="" class="cart-img"> 
+                    <div class="detail-box">
+                        <div class="cart-product-title">Earbuds</div> 
+                        <div class="cart-price">$10</div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <!-- Remove Cart -->
+                    <i class='fas fa-trash-alt cart-remove'></i>
+                  </div>
+                  <div class="cart-box">
+                    <img src="images/event.jpg" alt="" class="cart-img"> 
+                    <div class="detail-box">
+                        <div class="cart-product-title">Earbuds</div> 
+                        <div class="cart-price">$10</div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <!-- Remove Cart -->
+                    <i class='fas fa-trash-alt cart-remove'></i>
+                  </div>
+                </div>    
+          
+            <div class="payer"> 
+                <hr>
+                <div>
+                  <div class="remember-forgot">
+                      <div class=”total-title”>Sub-Total : </div>
+                      <div class=”total-price”>$0.0</div>
+                  </div>
+    
+                  <button type="submit" name="signin" class="btn">Checkout</button>
+              </div>
+            </div> 
+        </form>
+      </div>
+    </div>
+      <div class="overlay hidden"></div>
+
+
+      <footer class="footer">
+        <ul class="footer__nav">
+          <li class="footer__item">
+            <a class="footer__link" href="#">About</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" target="_blank" href="event_filter/TICKET.HTML">Pricing</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" target="_blank" href="contact/contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <img src="#" alt="Logo" class="footer__logo" />
+      </footer>
+  
+    
   </body>
 </html>
