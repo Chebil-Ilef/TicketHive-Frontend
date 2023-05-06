@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Leaflet CSS-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
+    />
+
+    <link rel="stylesheet" href="description.css" />
+    <title>Event Description</title>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="fakeMenu">
+          <div class="fakeButtons fakeClose"></div>
+          <div class="fakeButtons fakeMinimize"></div>
+          <div class="fakeButtons fakeZoom"></div>
+        </div>
+        <div class="fakeScreen">
+          <p class="line1">
+            &#91;&nbsp;&ldquo;Date : 13th of may 2023&rdquo;,<span
+              class="cursor1"
+              >_</span
+            >
+          </p>
+          <p class="line2">
+            &nbsp;&nbsp;&ldquo;Location : Uthina Amphitheatre&rdquo;,<span
+              class="cursor2"
+              >_</span
+            >
+          </p>
+          <p class="line3">
+            &nbsp;&nbsp;&ldquo;Don't miss out on the
+            chance!&rdquo;&nbsp;&#93;<span class="cursor3">_</span>
+          </p>
+          <p class="line4">><span class="cursor4">_</span></p>
+        </div>
+      </div>
+      <div class="home-content">
+        <h1>
+          Next
+          <span class="highlight">Music</span>
+          Festival
+        </h1>
+        <div class="localisation">
+          <div class="location-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="lecture">Amphiteatre Uthina</h3>
+        </div>
+        <div>
+          <h6 class="lecture">
+            <br /><br />@argyofficial, @bogofficial, @soel_music, @marinocanal,
+            and @dishdash_music are headed towards our amphitheater from <br />
+            some of the world's largest festivals and shows.<br />
+            They bring with them a record consisting of outstanding tracks.
+            <br /><br />
+            Don't miss out the chance to experience the best event ever
+            organized in Tunisia! .
+          </h6>
+        </div>
+        <button class="btn--text btn--scroll-to" id="bouttonmap">
+          View Location In Map &DownArrow;
+        </button>
+        <div class="bouton-lien">
+          <a class="btn" href="#">Add to my Cart</a>
+        </div>
+      </div>
+      <br />
+    </section>
+
+    <section class="section" id="section--1">
+      <div class="location" id="map">Hello world</div>
+    </section>
+  </body>
+</html>
+<!-- Leaflet JS-->
+<script
+  src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+  crossorigin=""
+></script>
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+<script src="description.js"></script>
