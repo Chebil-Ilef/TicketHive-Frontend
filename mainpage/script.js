@@ -259,3 +259,68 @@ function animateLetters() {
 }
 
 animateLetters();
+
+
+
+
+// CART WINDOW JS
+// Find the cart icon link and the cart modal container
+const openCartIcon = document.getElementById('open-cart-icon');
+const cartModalContainer = document.querySelector('.modal-container');
+
+// Add an event listener to the cart icon link
+openCartIcon.addEventListener('click', showCartModal);
+
+function showCartModal() {
+  // Show the cart modal container
+  cartModalContainer.classList.remove('hidden');
+  
+  // Get the cart content element and clear any existing items
+  const cartContent = document.querySelector('.cart-content');
+  cartContent.innerHTML = '';
+  
+  // Loop through the cart items and add HTML elements for each
+  for (let i = 0; i < cartItems.length; i++) {
+    const item = cartItems[i];
+    
+    // Create HTML elements for the item
+    const cartBox = document.createElement('div');
+    cartBox.classList.add('cart-box');
+    const cartImg = document.createElement('img');
+    cartImg.classList.add('cart-img');
+    cartImg.src = item.image;
+    const cartTitle = document.createElement('h3');
+    cartTitle.classList.add('cart-title');
+    cartTitle.innerText = item.name;
+    const cartPrice = document.createElement('span');
+    cartPrice.classList.add('cart-price');
+    cartPrice.innerText = '$' + item.price;
+    const cartQuantity = document.createElement('input');
+    cartQuantity.classList.add('cart-quantity');
+    cartQuantity.type = 'number';
+    cartQuantity.min = 1;
+    cartQuantity.value = item.quantity;
+    const removeButton = document.createElement('button');
+    removeButton.classList.add('cart-remove');
+    removeButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
+    
+    // Add the elements to the cart box
+    cartBox.appendChild(cartImg);
+    cartBox.appendChild(cartTitle);
+    cartBox.appendChild(cartPrice);
+    cartBox.appendChild(cartQuantity);
+    cartBox.appendChild(removeButton);
+    
+    // Add the cart box to the cart content element
+    cartContent.appendChild(cartBox);
+  }
+  
+}
+
+
+const closeButton = document.querySelector('.close-button');
+closeButton.addEventListener('click', hideCartModal);
+
+function hideCartModal() {
+  cartModalContainer.classList.add('hidden');
+}

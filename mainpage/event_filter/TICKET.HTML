@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue</title>
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="TICKET.CSS">
+</head>
+<body>
+  <header class="header">
+    <!-- Nav Bar -->
+    <nav class="nav">
+      <img src="icon.png" alt="*logo" class="nav__logo" id="logo" />
+      <a class="navbar-brand" href="">TicketHive</a>
+      <ul class="nav__links">
+        <li class="nav__item">
+          <a class="nav__link" href="#section--1">Events</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="navContainer">
+    <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1"><div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Genre
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sports</a></li>
+                  <li><a class="dropdown-item" href="#">Festivals</a></li>
+                  <li><a class="dropdown-item" href="#">Theatre</a></li>
+                  <li><a class="dropdown-item" href="#">Others</a></li>
+                  <li><a class="dropdown-item" href="#">All</a></li>
+                </ul>
+              </div></span>
+            <input type="text" class="form-control" placeholder="Write your prefrences " aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </form>
+      </nav> </div>
+      <div class="imageContainerContainer">
+      <div class="imageContainer">
+        <!--textOver is the title of the event that would be displayed-->
+        <div class="image">
+          <!--trying gif playing when hovering-->
+            <img src="IMAGES/ucl.png" onmouseover="this.src='IMAGES/haaland.gif'" onmouseout="this.src='IMAGES/ucl.png'">
+            <div class="textOver">Man City vs Bayern</div>
+        </div>
+        <div class="image">
+          <img src = "IMAGES/othersDefault.jpg" >
+          <div class="textOver">Other Events</div>
+        </div>
+        <div class="image">
+          <img src = "IMAGES/theatreDefault.webp" >
+          <div class="textOver">Theatre</div>
+        </div>
+        <div class="image">
+          <img src = "IMAGES/festivalsDefault.jpg" >
+          <div class="textOver">Festival</div>
+        </div>
+        <div class="image">
+          <img src = "IMAGES/sportDefault.png" >
+          <div class="textOver">Sports</div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <ul class="footer__nav">
+          <li class="footer__item">
+            <a class="footer__link" href="#">About</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" target="_blank" href="event_filter/TICKET.HTML">Pricing</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" target="_blank" href="contact/contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <img src="#" alt="Logo" class="footer__logo" />
+    </footer>
+      <script src = "TICKET.JS"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</body>
+</html>
